@@ -23,7 +23,7 @@ var myData = [
       "apples": 5,
       "orange": 5,
       "foo": "x",
-      "bar": "pizza"
+      "bar": "pizza" 
     },{
       "apples": 5,
       "orange": 5,
