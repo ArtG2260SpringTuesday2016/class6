@@ -16,10 +16,10 @@ var twoItemArrayFromMyData = function(myData) {
 
 
 // Array with 2 items -> array of numbers
-var sumOfFirstTwoArrayItems = function (someData) {
+var sumOfFirstTwoArrayItems = function (anArray) {
   var finalArray = [];
-  for (var i = 0; i < myData.length; i += 2) {
-    addedArrayItems = someData[i][0] + someData[i][1];
+  for (var i = 0; i < myData.length; i++) {
+    addedArrayItems = anArray[i][0] + anArray[i][1];
     finalArray.push(addedArrayItems);
   }
   return finalArray;
