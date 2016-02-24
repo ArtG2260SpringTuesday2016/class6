@@ -41,17 +41,43 @@ var otherData = [
   }
 ];
 
+
+var firstTwoNumbers = function (myData) {
+  var justFruit = [];
+  for (var i = 0; i < myData.length; i++){
+    var tempArray = [myData[i].apples, myData[i].orange];
+    justFruit.push(tempArray);
+  }
+  return justFruit;
+}
+
+var sumOfFirstTwoItems = function(someData){
+  var finalArray = [];
+  for (var i = 0; i < myData.length; i * 2){
+    addedArrayItems = someData[i] + someData[i+1];
+    finalArray.push(addedArrayItems);
+  }
+  return finalArray;
+}
+
+var fruitTotals = function(myData){
+  return sumOfFirstTwoItems(firstTwoNumbers(myData))
+}
+
 function setup() {
   createCanvas(1000, 500)
   noStroke()
   fill("orange")
-  var visTotals = function (someData) {
+  var fruitTotals = function(someData){
     for (var i = 0; i < someData.length; i++){
-      var barHeight = someData[i].apples + someData[i].orange;
-      rect(i * 15, 0, 10, barHeight * 10)
+      var barHeight = (someData[i].apples + someData[i].orange)*10;
+      var barSpacing = i*15;
+      var barEnd = 0;
+      var barWidth = 10;
+      rect(barSpacing, barEnd, barWidth, barHeight)
     }
   }
-  visTotals(myData);
+  fruitTotals(myData);
 }
 
 function draw() {
