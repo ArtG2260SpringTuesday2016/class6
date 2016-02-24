@@ -1,12 +1,12 @@
 var myData = [
     {
-      "apples": 5,
+      "apples": 1,
       "orange": 5,
       "foo": "x",
       "bar": otherData
     },{
-      "apples": 6,
-      "orange": 4,
+      "apples": 2,
+      "orange": 18,
       "foo": "x",
       "bar": "numbers"
     },{
@@ -20,13 +20,13 @@ var myData = [
       "foo": "x",
       "bar": "waffles"
     },{
-      "apples": 5,
-      "orange": 5,
+      "apples": 6,
+      "orange": 22,
       "foo": "x",
       "bar": "pizza"
     },{
       "apples": 5,
-      "orange": 5,
+      "orange": 19,
       "foo": "x",
       "bar": "icecream"
     }
@@ -34,26 +34,38 @@ var myData = [
 
 var otherData = [
   {
-    "apples": 5,
-    "orange": 5,
+    "apples": 75,
+    "orange": 25,
     "foo": "x",
     "bar": "nested"
   }
 ];
 
+// helper function that makes random number between two other numbers
+
 function setup() {
   createCanvas(1000, 500)
   noStroke()
   fill("orange")
-  var visTotals = function (someData) {
-    for (var i = 0; i < someData.length; i++){
-      var barHeight = someData[i].apples + someData[i].orange;
-      rect(i * 15, 0, 10, barHeight * 10)
-    }
+  graph(myData);
+}
+
+var graph = function (someData) {
+  for (var i = 0; i < someData.length; i++){
+    var barHeight = someData[i].apples + someData[i].orange;
+    var barWidth = 10;
+    var spacing = i * (margin + barWidth);
+    rect(i * 25, 0, 10, barHeight * 10)
+    
   }
-  visTotals(myData);
 }
 
-function draw() {
+var value = 10
+//helper function
+function drawARectangle(someData, barHeight) {
+  var size = 10;
+  console.log(value);
 
-}
+
+
+
