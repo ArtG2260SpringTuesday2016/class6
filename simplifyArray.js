@@ -19,8 +19,14 @@ var twoItemArrayFromMyData = function(myData) {
 var sumOfFirstTwoArrayItems = function (someData) {
   var finalArray = [];
   for (var i = 0; i < myData.length; i += 2) {
-    addedArrayItems = someData[i] + someData[i + 1];
+    addedArrayItems = someData[i][0] + someData[i][1];
     finalArray.push(addedArrayItems);
   }
   return finalArray;
+}
+
+// I'm lazy, combine the two
+// Takes in JSON outputs totals
+var fruitTotals = function(myData) {
+  return sumOfFirstTwoArrayItems(twoItemArrayFromMyData(myData))
 }
