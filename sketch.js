@@ -41,16 +41,43 @@ var otherData = [
   }
 ];
 
+/*
+ var twoitemarrayfromData = function (myData){
+  var finalArray = [];
+  for (var i = 0; i < myData.length; i++) {
+  var tempArray = [myData[i][0], myData[i][1]];
+  finalArray.push(tempArray);
+  }
+  return finalArray;
+  } 
+  
+  
+  
+  var totaltwoitemsfromData = function (myData){
+    var sumArray = [];
+    for (var i = 0; i < myData.length; i++){
+      addedArrayItems = somedata[i] + someData[i + 1];
+      sumArray.push(addedArrayItems);
+    }
+    return sumArray;
+  }
+  
+ */
+ 
+ 
 function setup() {
-  createCanvas(1000, 500)
-  noStroke()
-  fill("orange")
+  createCanvas(1000, 500);
+  noStroke();
+  fill("orange");
   var visTotals = function (someData) {
     for (var i = 0; i < someData.length; i++){
       var barHeight = someData[i].apples + someData[i].orange;
-      rect(i * 15, 0, 10, barHeight * 10)
+      var rectWidth=10;
+      rectHeight=barHeight * 10;
+      var spacing=i * (5 + rectWidth);
+      rect(spacing, 0, rectWidth, rectHeight);
     }
-  }
+  };
   visTotals(myData);
 }
 
