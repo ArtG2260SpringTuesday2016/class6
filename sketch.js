@@ -1,12 +1,12 @@
 var myData = [
     {
       "apples": 5,
-      "orange": 5,
+      "orange": 4,
       "foo": "x",
       "bar": otherData
     },{
       "apples": 6,
-      "orange": 4,
+      "orange": 1,
       "foo": "x",
       "bar": "numbers"
     },{
@@ -16,12 +16,12 @@ var myData = [
       "bar": "garbage"
     },{
       "apples": 1,
-      "orange": 9,
+      "orange": 4,
       "foo": "x",
       "bar": "waffles"
     },{
       "apples": 5,
-      "orange": 5,
+      "orange": 7,
       "foo": "x",
       "bar": "pizza"
     },{
@@ -35,7 +35,7 @@ var myData = [
 var otherData = [
   {
     "apples": 5,
-    "orange": 5,
+    "orange": 10,
     "foo": "x",
     "bar": "nested"
   }
@@ -45,11 +45,19 @@ function setup() {
   createCanvas(1000, 500)
   noStroke()
   fill("orange")
+   
   var visTotals = function (someData) {
     for (var i = 0; i < someData.length; i++){
+       var pointX = i * 50;
+       var rectHeight = barHeight * 10;
+       var barWidth = 10;
+       var spacing = 5 + barWidth;
       var barHeight = someData[i].apples + someData[i].orange;
-      rect(i * 15, 0, 10, barHeight * 10)
+      rect(pointX, spacing, barWidth, rectHeight)
     }
+   
+
+   
   }
   visTotals(myData);
 }
