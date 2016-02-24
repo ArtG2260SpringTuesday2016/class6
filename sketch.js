@@ -48,7 +48,10 @@ function setup() {
   var visTotals = function (someData) {
     for (var i = 0; i < someData.length; i++){
       var barHeight = someData[i].apples + someData[i].orange;
-      rect(i * 15, 0, 10, barHeight * 10)
+      var barWidth = (barHeight * 10);
+      var barX = (i*15);
+      var barY = 0;
+      rect(barX, barY, barHeight, barWidth)
     }
   }
   visTotals(myData);
