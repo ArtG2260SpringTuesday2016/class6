@@ -62,3 +62,30 @@ function setup() {
 function draw() {  
 
 }
+
+
+var lessFruit = function(myData){
+  var finalArray = [];
+  for(i =0; i<myData.length; i++){
+  var newArray = [myData[i].apples,myData[i].orange];
+finalArray.push(newArray);
+}
+return finalArray;
+}
+
+
+var sumOfFirstTwo= function(anArray){
+var finalArray = [];
+  for(i =0; i< myData.length; i++){
+  addArrayItems = [anArray[i][0]+ anArray[i][1]];
+finalArray.push(addedArrayItems);
+}
+return finalArray;
+}
+
+varfruitTotals = function(myData){
+  return sumOfFirstTwo(lessfruit(myData))
+}
+
+
+
