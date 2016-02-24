@@ -41,17 +41,21 @@ var otherData = [
   }
 ];
 
+var graph = function (someData) {
+  for (var i = 0; i < someData.length; i++){
+    var barWidth = 10
+    var spacing = i * (margin + barWidth);
+    var margin = 5;
+    var barHeight = someData[i].apples + someData[i].orange;
+    rect(spacing, 0, barWidth, barHeight * 10)
+  }
+}
+
 function setup() {
   createCanvas(1000, 500)
   noStroke()
   fill("orange")
-  var visTotals = function (someData) {
-    for (var i = 0; i < someData.length; i++){
-      var barHeight = someData[i].apples + someData[i].orange;
-      rect(i * 15, 0, 10, barHeight * 10)
-    }
-  }
-  visTotals(myData);
+  graph(myData);
 }
 
 function draw() {
