@@ -59,6 +59,6 @@ function setup() {
   visTotals(myData);
 }
 
-function draw() {
+function draw() {  
 
 }
