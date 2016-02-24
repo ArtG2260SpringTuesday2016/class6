@@ -44,14 +44,16 @@ var otherData = [
 function setup() {
   createCanvas(1000, 500)
   noStroke()
-  fill("orange")
+  fill("orange")  
   var visTotals = function (someData) {
     for (var i = 0; i < someData.length; i++){
       var barHeight = someData[i].apples + someData[i].orange;
-      var barWidth = (barHeight * 10);
-      var barX = (i*15);
+      var barWidth = 10;
+      var margin = 5;
+      var spacing = i *(margin + barWidth);
       var barY = 0;
-      rect(barX, barY, barHeight, barWidth)
+      
+      rect(spacing, barY, barWidth, barHeight * 10)
     }
   }
   visTotals(myData);
