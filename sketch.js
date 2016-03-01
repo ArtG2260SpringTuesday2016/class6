@@ -41,16 +41,18 @@ var otherData = [
   }
 ];
 
+
+var barHeight = function(x, y){
+ return x[y].apples + x[y].orange
+}
+var barWidth = 10;
+var margin = barWidth / 2;
+var spacing = function(x){
+  return x * (margin + barWidth)
+}
 var visTotals = function (someData) {
   for (var i = 0; i < someData.length; i++){
-    var barHeight = someData[i].apples + someData[i].orange;
-
-    var barWidth = 10;
-    var margin = barWidth / 2;
-    var spacing = i * (margin + barWidth);
-
-
-    rect(spacing, 0, barWidth, barHeight * 10)
+    rect(spacing(i), 0, barWidth, barHeight(someData, i) * 10)
   }
 }
 
