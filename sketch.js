@@ -43,24 +43,25 @@ var otherData = [
 
 
 var barHeight = function(x, y){
- return x[y].apples + x[y].orange
-}
+ return x[y].apples + x[y].orange;
+};
+var big = 10;
 var barWidth = 10;
 var margin = barWidth / 2;
 var spacing = function(x){
-  return x * (margin + barWidth)
-}
+  return x * (margin + barWidth);
+};
 var visTotals = function (someData) {
   for (var i = 0; i < someData.length; i++){
-    rect(spacing(i), 0, barWidth, barHeight(someData, i) * 10)
+    rect(spacing(i), 0, barWidth, barHeight(someData, i) * big);
   }
-}
+};
 
 
 function setup() {
-  createCanvas(1000, 500)
-  noStroke()
-  fill("orange")
+  createCanvas(1000, 500);
+  noStroke();
+  fill("orange");
 
   visTotals(myData);
 }
